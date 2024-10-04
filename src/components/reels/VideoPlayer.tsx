@@ -1,9 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import PagerView from 'react-native-pager-view';
 import VideoCustom from './VideoItem'; // Import your VideoCustom component
-import { getVideoByKeywordApi } from '../api/VideoApi';
-import { Video } from '../types/video';
-import { log } from '../utils/LogConfig';
+import { getVideoByKeywordApi } from '../../api/VideoApi';
+import { Video } from '../../types/video';
+import { log } from '../../utils/LogConfig';
 
 const VideoPlayer = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -84,7 +84,7 @@ const VideoPlayer = () => {
                         {
                             source: { uri: getHighestResolutionLink(video) },
                             repeat: true,
-                            controls: false
+                            controls: false,
                         }
                     }
                     currentId={currentId}

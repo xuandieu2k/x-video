@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Provider } from 'react-redux';
 import store from './src/store/Index';
-import ErrorBoundary from './src/components/ErrorBoundary';
+import ErrorBoundary from './src/components/base/ErrorBoundary';
 import { Alert, BackHandler } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import StackNavigator from './src/navigation/StackNavigator';

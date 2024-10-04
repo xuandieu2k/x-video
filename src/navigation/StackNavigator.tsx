@@ -1,7 +1,12 @@
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeScreen from '../screens/HomeScreen';
-import DetailsScreen from '../screens/DetailsScreen';
+
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+// Import screens
+import { MovieDetailScreen } from '../screens/MovieDetailScreen';
+import { HomeMovieScreen } from '../screens/HomeMovieScreen';
+import { WatchMovieScreen } from '../screens/WatchMovieScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -10,18 +15,26 @@ const StackNavigator = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
+          key={0}
           name="Home"
-          component={HomeScreen}
+          component={HomeMovieScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="Details"
-          component={DetailsScreen}
+          key={1}
+          name="MovieDetailScreen"
+          component={MovieDetailScreen}
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
+          key={2}
+          name="WatchMovieScreen"
+          component={WatchMovieScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>
-
   );
 };
 

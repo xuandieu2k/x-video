@@ -1,9 +1,9 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import VideoCustom from './VideoItem'; // Import your VideoCustom component
-import { getVideoByKeywordApi } from '../api/VideoApi';
-import { Video } from '../types/video';
-import { log } from '../utils/LogConfig';
+import { getVideoByKeywordApi } from '../../api/VideoApi';
+import { Video } from '../../types/video';
+import { log } from '../../utils/LogConfig';
 import { Animated, View, Dimensions, FlatList } from 'react-native';
 
 const { height } = Dimensions.get('window');

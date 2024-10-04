@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Dimensions, SafeAreaView, View, ActivityIndicator } from 'react-native';
 import VideoCustom from './VideoItem'; // Import your VideoCustom component
-import { getVideoByKeywordApi } from '../api/VideoApi';
-import { Video } from '../types/video';
+import { getVideoByKeywordApi } from '../../api/VideoApi';
+import { Video } from '../../types/video';
 import { RecyclerListView, DataProvider, LayoutProvider } from 'recyclerlistview';
-import { log } from '../utils/LogConfig';
+import { log } from '../../utils/LogConfig';
 import { debounce } from 'lodash';
 
 const { height, width } = Dimensions.get('window');
@@ -12,7 +12,7 @@ const { height, width } = Dimensions.get('window');
 const VideoPlayerWithRecycler = () => {
     const [videos, setVideos] = useState<Video[]>([]);
     const [currentId, setCurrentId] = useState(-1);
-    const [loading, setLoading] = useState(true); // Biến để theo dõi trạng thái loading
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetchVideos();
@@ -20,7 +20,7 @@ const VideoPlayerWithRecycler = () => {
 
     const fetchVideos = async () => {
         try {
-            const response = await getVideoByKeywordApi(2, 10, "winter");
+            const response = await getVideoByKeywordApi(1, 10, "vietnam");
             setVideos(response.videos);
             setCurrentId(response.videos[0].id);
         } catch (error) {
@@ -67,7 +67,6 @@ const VideoPlayerWithRecycler = () => {
                             source: { uri: getHighestResolutionLink(data) },
                             repeat: true,
                             controls: false,
-                            poster: data.image
                         }}
                         currentId={currentId}
                         index={index}

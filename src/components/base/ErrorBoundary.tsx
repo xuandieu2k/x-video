@@ -1,6 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { log } from '../utils/LogConfig';
 import { Text, View } from 'react-native';
+import { log } from '../../utils/LogConfig';
 
 interface ErrorBoundaryProps {
   children: ReactNode;

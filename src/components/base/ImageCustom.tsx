@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Image, ImageProps, ImageSourcePropType } from "react-native";
-import defaultImage from "../../assets/img/movie_default.png"; // The PNG image
+import defaultImage from "../../assets/img/movie_default.jpg"; // The PNG image
 import defaultAvatar from "../../assets/img/user_default.png"; // The PNG image
 
 interface ImageCustomProps extends Omit<ImageProps, 'source'> {

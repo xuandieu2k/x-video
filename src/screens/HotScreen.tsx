@@ -4,7 +4,7 @@ import { CategoryFilter } from "../components/CategoryFilter"
 import { Movie } from "../types/Movie"
 import { MovieItem } from "../components/MovieItem"
 import { useNavigation } from '@react-navigation/native';
-import { getPopular, getTrending } from "../api/MovieApi"
+import {  getTrending } from "../api/MovieApi"
 
 export const HotScreen = () => {
     const navigation = useNavigation();

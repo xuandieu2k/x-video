@@ -76,10 +76,11 @@ export const WatchMovieScreen = ({ route }: WatchMovieScreenProps) => {
     `);
 
   const handleNavigationStateChange = (event: WebViewNavigation) => {
-    if (event.navigationType == "click" || event.navigationType == "other") {
-      return false;
-    }
-    return true;
+    return false;
+    // if (event.navigationType == "click" || event.navigationType == "other") {
+    //   return false;
+    // }
+    // return true;
   };
 
   return (<WebView

@@ -7,6 +7,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { MovieDetailScreen } from '../screens/MovieDetailScreen';
 import { HomeMovieScreen } from '../screens/HomeMovieScreen';
 import { WatchMovieScreen } from '../screens/WatchMovieScreen';
+import { HotScreen } from '../screens/HotScreen';
+import { SearchMovieScreen } from '../screens/SearchMovieScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +33,20 @@ const StackNavigator = () => {
           key={2}
           name="WatchMovieScreen"
           component={WatchMovieScreen}
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
+          key={3}
+          name="HotScreen"
+          component={HotScreen}
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
+          key={4}
+          name="SearchMovieScreen"
+          component={SearchMovieScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

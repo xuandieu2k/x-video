@@ -2,7 +2,7 @@ import React from "react"
 import { Image, Text, TouchableOpacity, View } from "react-native"
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
 import { Movie } from "../types/Movie"
-import { getNameMovie, getReleaseMovie, getURLImage } from "../utils/MovieUtils";
+import { formatCurrency, getNameMovie, getReleaseMovie, getURLImage } from "../utils/MovieUtils";
 import { ImageCustom } from "./base/ImageCustom";
 interface MovieItemProps {
     movie: Movie;
@@ -28,7 +28,7 @@ export const MovieItem: React.FC<MovieItemProps> = ({ movie, onPress }) => {
                     <Text className="text-black mt-2 text-sm">{getReleaseMovie(movie)}</Text>
                     <View className="flex-row mt-2 items-center">
                         <MaterialCommunityIcons key={0} name="eye" size={24} color={"#ffdab9"} />
-                        <Text className="text-black ml-1 text-sm">{movie.vote_count} Đánh giá </Text>
+                        <Text className="text-black ml-1 text-sm">{formatCurrency(movie.vote_count)} Đánh giá </Text>
                     </View>
                     <View className="flex-row mt-2 items-center">
                         <MaterialCommunityIcons key={0} name="heart" size={24} color={"#ffd166"} />

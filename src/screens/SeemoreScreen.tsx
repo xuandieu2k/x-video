@@ -6,7 +6,7 @@ import { MovieItem } from "../components/MovieItem"
 import { useNavigation } from '@react-navigation/native';
 import {  getTrending } from "../api/MovieApi"
 
-export const HotScreen = () => {
+export const SeemoreScreen = () => {
     const navigation = useNavigation();
     const [categories, setCategories] = useState<string[]>([
         "Trending",

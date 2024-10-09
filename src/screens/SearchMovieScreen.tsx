@@ -7,6 +7,7 @@ import { MovieSearchItem } from "../components/MovieSearchItem";
 import { useNavigation } from "@react-navigation/native";
 import { NoData } from "../components/NoData";
 import Icon from 'react-native-vector-icons/Ionicons';
+import Icon_Search from "../assets/img/search.png";
 
 export const SearchMovieScreen = () => {
     const [movies, setMovies] = useState<Movie[]>([]);
@@ -68,7 +69,7 @@ export const SearchMovieScreen = () => {
                             <Icon name="arrow-back" size={24} color="black" />
                         </TouchableOpacity>
                         <View className="flex flex-row flex-1 items-center bg-[#edede9] px-2 rounded-lg">
-                            <ImageCustom className="h-8 w-8 mr-2" source={{ uri: 'https://img.icons8.com/color/512/search.png' }} />
+                            <ImageCustom className="h-8 w-8 mr-2" source={Icon_Search} />
                             <TextInput
                                 className="flex-grow p-2 rounded text-[16px] text-black"
                                 value={searchTerm}

@@ -17,6 +17,7 @@ import { SectionTitle } from "../components/SectionTitle";
 import { GenreItem } from "../components/GenreItem";
 import { SeasonItem } from "../components/SeasonItem";
 import { EpisodeItem } from "../components/EpisodeItem";
+import { ShimmerDetailScreen } from "../components/shimmer/ShimmerDetailScreen";
 
 interface MovieDetailScreenParams {
     id: number;
@@ -119,9 +120,7 @@ export const MovieDetailScreen = ({ route, navigation }: MovieDetailScreenProps)
                 <HeaderApp title={getNameMovie(movie)} />
                 <ScrollView>
                     {isLoading ? (
-                        <View className="flex-1 items-center justify-center">
-                            <ActivityIndicator size="large" color="#219ebc" />
-                        </View>
+                        <ShimmerDetailScreen />
                     ) :
                         <View className="p-[10px]">
                             <ImageCustom

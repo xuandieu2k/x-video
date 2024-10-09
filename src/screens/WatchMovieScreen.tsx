@@ -87,6 +87,11 @@ export const WatchMovieScreen = ({ route }: WatchMovieScreenProps) => {
     setBuiltInZoomControls={false}
     setDisplayZoomControls={false}
     onNavigationStateChange={handleNavigationStateChange}
+    onShouldStartLoadWithRequest={request => {
+      if (request.url.includes('http')) {
+          return false;
+      } else return true;
+     }}
     originWhitelist={['*']}
     source={{ html: html }}
     style={styles.webView}

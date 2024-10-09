@@ -27,7 +27,7 @@ const HeaderApp: React.FC<HeaderAppProps> = ({
             <Icon name="arrow-back" size={24} color={textColor.replace('text-', '')} />
           </TouchableOpacity>
         )}
-        <Text className={`${textColor} text-lg font-bold flex-1 text-center`}>{title}</Text>
+        <Text className={`${textColor} text-lg font-bold flex-1 text-center `}>{title}</Text>
       </View>
     </>
   );
